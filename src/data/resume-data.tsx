@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "Rust Developer dedicated to improve web3 world.",
   summary:
-    "As a Rust Developer, I specialize in decentialized systems, blockchains, WebServer and enthusiast to work in cryptography and Zero knowledge proofs. I have also worked in the field of AI improving and building multiple image processing models, fetching OCR from images and LLMs.",
+    "As a Rust Developer, I specialize in decentralized systems, substrate and EVM based chains, evm smart contract, web servers and enthusiast to work in cryptography and Zero knowledge proofs. I have also worked in the field of AI improving and building multiple image processing models, fetching OCR from images and LLMs.",
   avatarUrl: undefined,
   personalWebsiteUrl: "",
   contact: {
@@ -146,6 +146,33 @@ export const RESUME_DATA = {
       link: {
         label: "github.com",
         href: "https://github.com/Analog-Labs/chain-connectors/",
+      },
+    },
+    {
+      title: "Analog Gmp (General mesage passing)",
+      techStack: [
+        "Solidity",
+        "Foundry",
+      ],
+      description: "Analog smart contracts for evm chains. That help process analog's gmp messages and executes on the deployed chains.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "github.com",
+        href: "https://github.com/Analog-Labs/analog-gmp/",
+      },
+    },
+    {
+      title: "Analog Timegraph",
+      techStack: [
+        "Rust",
+        "GraphQL",
+        "Subxt",
+      ],
+      description: "Analog's data warehouse for which helps indexing and quering of user data and smart contract triggers.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "github.com",
+        href: "https://github.com/Analog-Labs/timegraph-sdk/",
       },
     },
     {
