@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "Rust Developer dedicated to improve web3 world.",
   summary:
-    "I am Rust Developer with over 5+ years of software engineering experience and 3+ years in Rust, I specialize in decentralized systems, substrate and EVM based chains,  web servers and enthusiast to work in cryptography and Zero knowledge proofs. I have also worked in the field of AI improving and building multiple image processing models, fetching OCR from images and LLMs.",
+    "I am a Rust Developer with 5+ years of software engineering experience and 3+ years specializing in Rust. I focus on decentralized systems, Substrate, and EVM-based chains, with expertise in web servers. I am also passionate about cryptography and Zero Knowledge Proofs. Additionally, I have experience in AI, working on image processing models, OCR extraction, and large language models (LLMs).",
   avatarUrl: undefined,
   personalWebsiteUrl: "",
   contact: {
