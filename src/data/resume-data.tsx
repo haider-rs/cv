@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "Rust Developer dedicated to improve web3 world.",
   summary:
-    "As a Rust Developer, I specialize in decentralized systems, substrate and EVM based chains, evm smart contract, web servers and enthusiast to work in cryptography and Zero knowledge proofs. I have also worked in the field of AI improving and building multiple image processing models, fetching OCR from images and LLMs.",
+    "I am Rust Developer with over 5+ years of software engineering experience and 3+ years in Rust, I specialize in decentralized systems, substrate and EVM based chains,  web servers and enthusiast to work in cryptography and Zero knowledge proofs. I have also worked in the field of AI improving and building multiple image processing models, fetching OCR from images and LLMs.",
   avatarUrl: undefined,
   personalWebsiteUrl: "",
   contact: {
@@ -36,7 +36,7 @@ export const RESUME_DATA = {
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/Haider-Ali-DS",
+        url: "https://github.com/haider-rs",
         icon: GitHubIcon,
       },
       {
