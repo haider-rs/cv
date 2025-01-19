@@ -25,7 +25,7 @@ export const RESUME_DATA = {
   location: "Lahore, Pakistan",
   locationLink: "https://www.google.com/maps/place/Lahore",
   about:
-    "Rust Developer dedicated to improve web3 world.",
+    "Rust Developer dedicated to improving the Web3 world.",
   summary:
     "I am a Rust Developer with 5+ years of software engineering experience and 3+ years specializing in Rust. I focus on decentralized systems, Substrate, and EVM-based chains, with expertise in web servers. I am also passionate about cryptography and Zero Knowledge Proofs. Additionally, I have experience in AI, working on image processing models, OCR extraction, and large language models (LLMs).",
   avatarUrl: undefined,
