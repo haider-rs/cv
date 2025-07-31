@@ -25,7 +25,7 @@ export const RESUME_DATA = {
   location: "Lahore, Pakistan",
   locationLink: "https://www.google.com/maps/place/Lahore",
   about:
-    "Rust Developer",
+    "Blockchain Developer",
   summary:
     "I am a Rust Developer with 5+ years of software engineering experience and 3+ years specializing in Rust. My main focus has been on decentralized systems, blockchains, and AI. I am also passionate about cryptography and Zero Knowledge Proofs. Additionally, I have experience in AI, working on image processing models, OCR extraction, and large language models (LLMs).",
   avatarUrl: undefined,
@@ -114,6 +114,19 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Firestarter",
+      techStack: [
+        "Solidity", "OpenZeppelin", "Beacon Proxy", "foundry", "uniswap v2"
+      ],
+      description:
+        "RWA marketplace having where users can create their own assets and trade them. It runs two AMM models, bonding curve and uniswap v2 forked contracts.",
+      logo: ParabolLogo,
+      link: {
+        label: "Zenswap",
+        href: "https://firestarter.fun/",
+      },
+    },
+    {
       title: "Analog Timechain",
       techStack: [
         "Rust",
@@ -131,6 +144,20 @@ export const RESUME_DATA = {
         href: "https://github.com/Analog-Labs/timechain/",
       },
     },
+    {
+      title: "Zenswap",
+      techStack: [
+        "Solidity", "CCTP", "Uniswap", "Rust"
+      ],
+      description:
+        "Cross chain token transfer protocol based on Circle CCTP token transfer.",
+      logo: ParabolLogo,
+      link: {
+        label: "Zenswap",
+        href: "zenswap.io",
+      },
+    },
+
     {
       title: "Analog Chain Connectors",
       techStack: [
@@ -177,7 +204,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Piqsol",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
+      techStack: ["TypeScript", "Next.js", "Browser Extension"],
       description:
         "Browser extension that records everything happening in a web application",
       logo: MonitoLogo,
@@ -238,7 +265,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Intelli Pass Screening System",
-      techStack: ["C#", "WPF", "Xamarin.Android", "Android" ],
+      techStack: ["C#", "WPF", "Xamarin.Android", "Android"],
       description:
         "This is an intelligent screening system that also supports attendance with Covid-19 precaution features. During Covid-19 there was a dire need to have a system to prevent people from entering the organisation who were having fever or without masks.",
       logo: JarockiMeLogo,
