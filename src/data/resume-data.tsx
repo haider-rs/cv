@@ -64,7 +64,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: null,
       description:
-        "Working on Multiple projects Substrate based Analog blockchain node / Timechain node. Multichain connectivity library i.e. Chain-Connectors. Solidity Smart contracts and Other R&D based solutions.",
+        "My main focus in Analog has been their timechain node built on polkadot-sdk for their cross chain gmp message protocol. Also did work on production level secure solidity smart contracts.",
     },
     {
       company: "Invozone",
@@ -75,7 +75,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2023",
       description:
-        "Worked in javascript to build solana nft marketplace and on customization of Solana smart contracts in Rust. Outsourced to Analog as a Rust Developer.",
+        "Started my blockchain journey with nft marketplace in Solana. Built Solana's fractional nft platform i.e. piqsol.com using metaplex contracts.",
     },
     {
       company: "Programmers Force",
