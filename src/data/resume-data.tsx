@@ -18,7 +18,7 @@ export const RESUME_DATA = {
   about:
     "Blockchain Developer",
   summary:
-    "With a total of 6 years of experience in software development, I have spent 3+ years in blockchain technology, Mostly working with Rust and Solidity. My main focus have been around cross chain communication (GMP, CCTP), between EVM and Non-EVM chains. EVM Smart contract development and building blockchains (polkadot-sdk) and offchain workers. I also have experience working with Python (AI) and C#. In my free time I like to learn new technologies and play chess.",
+    "With a total of 6 years of experience in software development, I have spent 3+ years in blockchain technology, Mostly working with Rust and Solidity. My main focus have been around cross chain communication (GMP, CCTP), between EVM and Non-EVM chains, EVM Smart contract development and building blockchain node using polkadot-sdk and offchain workers. I also have experience working with Python (AI) and C#. In my free time I like to learn new technologies and play chess.",
   achievements: [
     {
       text: "Top contributor at Analog's multi-chain node.",
