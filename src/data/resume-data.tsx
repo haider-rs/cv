@@ -1,33 +1,86 @@
 import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
   ClevertechLogo,
   ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
   JarockiMeLogo,
   JojoMobileLogo,
   Minimal,
-  MobileVikingsLogo,
   MonitoLogo,
-  NSNLogo,
   ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
 } from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, TelegramIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Haider Ali",
   initials: "HA",
   location: "Lahore, Pakistan",
+  timezone: "(UTC+5)",
   locationLink: "https://www.google.com/maps/place/Lahore",
   about:
     "Blockchain Developer",
   summary:
-    "I am a Rust Developer with 5+ years of software engineering experience and 3+ years specializing in Rust. My main focus has been on decentralized systems, blockchains, and AI. I am also passionate about cryptography and Zero Knowledge Proofs. Additionally, I have experience in AI, working on image processing models, OCR extraction, and large language models (LLMs).",
+    "With a total of 6 years of experience in software development, I have spent 3+ years in blockchain technology, Mostly working with Rust and Solidity. My main focus have been around cross chain communication (GMP, CCTP), between EVM and Non-EVM chains. EVM Smart contract development and building blockchains (polkadot-sdk) and offchain workers. I also have experience working with Python (AI) and C#. In my free time I like to learn new technologies and play chess.",
+  achievements: [
+    {
+      text: "Top contributor at Analog's multi-chain node.",
+      link: "https://github.com/Analog-Labs/timechain"
+    },
+    {
+      text: "Built secure cross-chain communication infrastructure.",
+      link: "https://github.com/Analog-Labs/timechain"
+    },
+    {
+      text: "Led a team to develop a cross-chain swap protocol.",
+      link: "https://zenswap.io"
+    },
+    {
+      text: "Developed and deployed RWA tokenization smart contracts.",
+      link: "https://firestarter.fun"
+    },
+    {
+      text: "Built the Solana NFT fractionalization backbone.",
+      link: "https://piqsol.com"
+    },
+    {
+      text: "Contributed to building the server infrastructure.",
+      link: "https://basebox.ai"
+    }
+  ],
+  skills: [
+    {
+      category: "Programming Languages",
+      items: [
+        "Rust (3+ years)",
+        "Substrate (3+ years)",
+        "Solidity (2+ years)",
+        "Python (1+ year)",
+        "C# (2+ years)",
+      ]
+    },
+    {
+      category: "Development",
+      items: [
+        "Forge", "Anvil", "Cast", "Cargo", "Tokio", "Axum", "libp2p", "Subxt"
+      ]
+    },
+    {
+      category: "Monitoring",
+      items: [
+        "CI/CD Codecov", "Grafana", "Github actions"
+      ]
+    },
+    {
+      category: "Security analysis",
+      items: [
+        "Slither", "Aderyn", "Fuzz", "Stateful Fuzzing"
+      ]
+    },
+    {
+      category: "DevOps",
+      items: [
+        "Docker", "Scripts (Bash, Foundry, Rust)"
+      ]
+    }
+  ],
   avatarUrl: undefined,
   personalWebsiteUrl: "",
   contact: {
@@ -43,6 +96,11 @@ export const RESUME_DATA = {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/haider-rs/",
         icon: LinkedInIcon,
+      },
+      {
+        name: "Telegram",
+        url: "https://rusty_haider.t.me",
+        icon: TelegramIcon,
       },
     ],
   },
@@ -99,18 +157,6 @@ export const RESUME_DATA = {
       description:
         "Worked as Software Engineer in C#/Xamarin. Built multiple Xamarin supported apps for Android, IOS and Windows.",
     },
-  ],
-  skills: [
-    "Rust",
-    "Substrate",
-    "Distributed Networking/Libp2p",
-    "Solidity",
-    "Yul",
-    "Python",
-    "TypeScript",
-    "Blockchain",
-    "Web Server",
-    "GraphQL",
   ],
   projects: [
     {
@@ -203,10 +249,26 @@ export const RESUME_DATA = {
       },
     },
     {
+      title: "Basebox.ai",
+      techStack: [
+        "Rust",
+        "GraphQL",
+        "Keycloak",
+        "Postgres",
+        "OpenAI",
+      ],
+      description: "Basebox AI is a platform used by organisations to provide AI to their employees keeping their data safe. I worked on building their server infrastructure using rust axum framework. Also worked on integrating keycloak for authentication and authorisation.",
+      logo: ConsultlyLogo,
+      link: {
+        label: "github.com",
+        href: "https://github.com/Analog-Labs/timegraph-sdk/",
+      },
+    },
+    {
       title: "Piqsol",
-      techStack: ["TypeScript", "Next.js", "Browser Extension"],
+      techStack: ["TypeScript", "Solana", "Metaplex"],
       description:
-        "Browser extension that records everything happening in a web application",
+        "Solana's first fractional NFT marketplace. Where users can create part of their NFT's and trade them. Built using metaplex contracts.",
       logo: MonitoLogo,
       link: {
         label: "piqsol.com",
@@ -224,14 +286,14 @@ export const RESUME_DATA = {
       title: "Object Detector",
       techStack: ["Python", "YOLO Object detection"],
       description:
-        "Browser extension that records everything happening in a web application",
+        "Trained custom object detection model using YOLO. Which could detect multiple objects from images and videos for their OCR pipeline.",
       logo: MonitoLogo,
     },
     {
       title: "Fake card detector",
       techStack: ["Python", "OpenCV"],
       description:
-        "Browser extension that records everything happening in a web application",
+        "Trained a model to detect fake/modified id cards. Used image processing and computer vision techniques to achieve the goal.",
       logo: MonitoLogo,
     },
     {

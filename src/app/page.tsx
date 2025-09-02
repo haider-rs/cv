@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   description: RESUME_DATA.summary,
 };
 
+function chunkArray(array, chunkSize) {
+  const result = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize));
+  }
+  return result;
+}
+
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
@@ -33,8 +41,21 @@ export default function Page() {
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.location}
               </a>
+              {RESUME_DATA.timezone && (
+                <>
+                  <span className="mx-1">·</span>
+                  <a
+                    className="hover:underline"
+                    href="https://www.timeanddate.com/time/zones/pkt"
+                    target="_blank"
+                  >
+                    {RESUME_DATA.timezone}
+                  </a>
+                </>
+              )}
+
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground">
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="size-8"
@@ -87,10 +108,10 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
+          {/* <Avatar className="size-28"> */}
+          {/* <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} /> */}
+          {/* <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback> */}
+          {/* </Avatar> */}
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -98,6 +119,41 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Top Achievements</h2>
+          <ul className="list-disc pl-6 space-y-1 text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
+            {RESUME_DATA.achievements.map((achievement, index) => (
+              <li key={index}>
+                {achievement.link ? (
+                  <a
+                    href={achievement.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-primary"
+                  >
+                    {achievement.text}
+                  </a>
+                ) : (
+                  achievement.text
+                )}
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Technical Skills</h2>
+          <ul className="pl-4 space-y-2 text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
+            {RESUME_DATA.skills.map((skillCategory, idx) => (
+              <li key={idx}>
+                <span className="font-semibold">{skillCategory.category}:</span>{" "}
+                {skillCategory.items.join(", ")}
+              </li>
+            ))}
+          </ul>
+        </Section>
+
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
@@ -160,24 +216,14 @@ export default function Page() {
             );
           })}
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return (
-                <Badge className="print:text-[10px]" key={skill}>
-                  {skill}
-                </Badge>
-              );
-            })}
-          </div>
-        </Section>
-
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
-              return (
+          {chunkArray(RESUME_DATA.projects, 3).map((projectRow, rowIdx) => (
+            <div
+              key={rowIdx}
+              className="flex gap-3 mb-3 print:break-inside-avoid"
+            >
+              {projectRow.map((project) => (
                 <ProjectCard
                   key={project.title}
                   title={project.title}
@@ -185,11 +231,12 @@ export default function Page() {
                   tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
                 />
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          ))}
         </Section>
       </section>
+
 
       <CommandMenu
         links={[
