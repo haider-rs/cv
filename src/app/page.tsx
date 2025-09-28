@@ -14,11 +14,21 @@ export const metadata: Metadata = {
   description: RESUME_DATA.summary,
 };
 
-function chunkArray(array, chunkSize) {
-  const result = [];
+// Generic function to chunk an array into smaller arrays.
+// <T> allows this to work with any array type (e.g., array of projects).
+// Input is 'readonly T[]' to handle immutable arrays safely.
+// Returns an array of arrays (T[][]), which are mutable.
+function chunkArray<T>(array: readonly T[], chunkSize: number): T[][] {
+  // Initialize an empty array to hold the chunks.
+  const result: T[][] = [];
+
+  // Loop through the input array in steps of chunkSize.
   for (let i = 0; i < array.length; i += chunkSize) {
+    // Slice a chunk from the array (slice() returns a mutable copy) and push it to the result.
     result.push(array.slice(i, i + chunkSize));
   }
+
+  // Return the array of chunks.
   return result;
 }
 
@@ -94,18 +104,6 @@ export default function Page() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex print:text-[12px]">
-              {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                  <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
-              ) : null}
-            </div>
           </div>
 
           {/* <Avatar className="size-28"> */}
@@ -122,8 +120,8 @@ export default function Page() {
 
         <Section>
           <h2 className="text-xl font-bold">Top Achievements</h2>
-          <ul className="list-disc pl-6 space-y-1 text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
-            {RESUME_DATA.achievements.map((achievement, index) => (
+          <ul className="list-disc pl-6 space-y-1 text-pretty font-mono text-xs text-muted-foreground print:text-[10px]">
+            {RESUME_DATA.achievements.map((achievement: { text: string; link?: string }, index) => (
               <li key={index}>
                 {achievement.link ? (
                   <a
@@ -144,7 +142,7 @@ export default function Page() {
 
         <Section>
           <h2 className="text-xl font-bold">Technical Skills</h2>
-          <ul className="pl-4 space-y-2 text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
+          <ul className="pl-4 space-y-2 text-pretty font-mono text-xs text-muted-foreground print:text-[10px]">
             {RESUME_DATA.skills.map((skillCategory, idx) => (
               <li key={idx}>
                 <span className="font-semibold">{skillCategory.category}:</span>{" "}
@@ -183,34 +181,12 @@ export default function Page() {
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm leading-none print:text-[12px]">
+                  <h4 className="font-mono text-xs leading-none print:text-[10px]">
                     {work.title}
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs print:text-[10px]">
                   {work.description}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2 print:text-[12px]">
-                  {education.degree}
                 </CardContent>
               </Card>
             );
@@ -235,6 +211,29 @@ export default function Page() {
             </div>
           ))}
         </Section>
+        {/* Education section is now here, after Projects */}
+        <Section>
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+              <Card key={education.school}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {education.school}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.start} - {education.end}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2 print:text-[12px]">
+                  {education.degree}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
       </section>
 
 
@@ -253,3 +252,4 @@ export default function Page() {
     </main>
   );
 }
+

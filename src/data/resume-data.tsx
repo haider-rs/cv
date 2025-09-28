@@ -104,14 +104,6 @@ export const RESUME_DATA = {
       },
     ],
   },
-  education: [
-    {
-      school: "Virtual University of Pakistan",
-      degree: "Bachelor's in Computer Science",
-      start: "2016",
-      end: "2019",
-    },
-  ],
   work: [
     {
       company: "Analog",
@@ -122,7 +114,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: null,
       description:
-        "My main focus in Analog has been their timechain node built on polkadot-sdk for their cross chain gmp message protocol. Also did work on production level secure solidity smart contracts.",
+        "My main focus in Analog has been Rust development for their timechain node built on polkadot-sdk for their cross chain gmp message protocol. I was involved in developing pallets, runtime, offchain workers, And also worked on offchain multinode for different chains. I as involved in writing libp2p networking setup for nodes as well as threshold signature scheme setup. Worked on solidity smart contract development and as well notable projects for solidity are analog-gmp, zenswap.io and firestarter.fun.",
     },
     {
       company: "Invozone",
@@ -133,7 +125,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2023",
       description:
-        "Started my blockchain journey with nft marketplace in Solana. Built Solana's fractional nft platform i.e. piqsol.com using metaplex contracts.",
+        "Started my blockchain journey with nft marketplace in Solana. Built Solana's fractional nft platform i.e. piqsol.com using metaplex contracts and deploying modified solana smart contracts. Was outsourced to Analog as Rust developer.",
     },
     {
       company: "Programmers Force",
@@ -144,7 +136,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2022",
       description:
-        "Worked as Python developer wrote tools for improving data pre and post processing pipelines for their AI models. Also Improved Object detection models using MRCNN and YOLO 5. Trained Multiple OCR Model and made the pipeline to train model OCR models for multiple languages and improved their text reading accuracy from 70% to 90%.",
+        "Worked as Python developer wrote tools for improving data pre and post processing pipelines for their AI models. Also Improved Object detection models using MRCNN and YOLO 5. Trained Multiple OCR Model and made the pipeline to train model OCR models for multiple languages and improved their text reading accuracy from 70% to 95%+. Encouraging them to move to open source tools from paid tools.",
     },
     {
       company: "Cybersoft North America Inc.",
@@ -155,7 +147,7 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2021",
       description:
-        "Worked as Software Engineer in C#/Xamarin. Built multiple Xamarin supported apps for Android, IOS and Windows.",
+        "Worked as Software Engineer in C#/Xamarin. Built multiple Xamarin supported apps for Android, IOS and Windows. Solved many of the pain points in the apps upgradeability and performance.",
     },
   ],
   projects: [
@@ -222,7 +214,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Analog Gmp (General mesage passing)",
+      title: "Analog Gmp",
       techStack: [
         "Solidity",
         "Foundry",
@@ -235,7 +227,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Analog Timegraph",
+      title: "Timegraph",
       techStack: [
         "Rust",
         "GraphQL",
@@ -257,7 +249,7 @@ export const RESUME_DATA = {
         "Postgres",
         "OpenAI",
       ],
-      description: "Basebox AI is a platform used by organisations to provide AI to their employees keeping their data safe. I worked on building their server infrastructure using rust axum framework. Also worked on integrating keycloak for authentication and authorisation.",
+      description: "Basebox AI provides access to AI LLM's keeping data safety as a top priority. Worked on server infrastructure Based on Rust, GraphQL, Keycloak and Postgres.",
       logo: ConsultlyLogo,
       link: {
         label: "github.com",
@@ -290,47 +282,68 @@ export const RESUME_DATA = {
       logo: MonitoLogo,
     },
     {
-      title: "Fake card detector",
+      title: "Fake Id card detector",
       techStack: ["Python", "OpenCV"],
       description:
         "Trained a model to detect fake/modified id cards. Used image processing and computer vision techniques to achieve the goal.",
       logo: MonitoLogo,
     },
+    /*   {
+         title: "KYSEK SML",
+         techStack: ["C#", "Xamarin.forms", "Android", "IOS"],
+         description:
+           "Kysek sportsman log. Helps to manage outdoor journeys and also Manage Kysek Ice Chest",
+         logo: Minimal,
+         link: {
+           label: "Kysek SML",
+           href: "https://kysek.com/products/sml",
+         },
+       },
+       {
+         title: "Chips",
+         techStack: ["C#", "Xamarin.forms", "Android", "IOS"],
+         description:
+           "Xamarin cross platform project to manage cargo ships by keeping information about packages in app so that their process can be streamlined in the app.",
+         logo: Minimal,
+         link: {
+           label: "CHiPS",
+           href: "https://csnainc.com/chips/",
+         },
+       },
+       {
+         title: "XVMS CMSR",
+         techStack: ["C#", "WPF", "Xamarin.Android", "Android", "Desktop App"],
+         description:
+           "Content Management System. App supported for Android and Desktop designed to help organisations to create and manage interactable dynamic content for big screens for their customers.",
+         logo: JarockiMeLogo,
+       },
+       {
+         title: "Intelli Pass Screening System",
+         techStack: ["C#", "WPF", "Xamarin.Android", "Android"],
+         description:
+           "This is an intelligent screening system that also supports attendance with Covid-19 precaution features. During Covid-19 there was a dire need to have a system to prevent people from entering the organisation who were having fever or without masks.",
+         logo: JarockiMeLogo,
+       }, */
+  ],
+  education: [
     {
-      title: "KYSEK SML",
-      techStack: ["C#", "Xamarin.forms", "Android", "IOS"],
-      description:
-        "Kysek sportsman log. Helps to manage outdoor journeys and also Manage Kysek Ice Chest",
-      logo: Minimal,
-      link: {
-        label: "Kysek SML",
-        href: "https://kysek.com/products/sml",
-      },
+      school: "Virtual University of Pakistan",
+      degree: "Bachelor's in Computer Science",
+      start: "2016",
+      end: "2019",
     },
     {
-      title: "Chips",
-      techStack: ["C#", "Xamarin.forms", "Android", "IOS"],
-      description:
-        "Xamarin cross platform project to manage cargo ships by keeping information about packages in app so that their process can be streamlined in the app.",
-      logo: Minimal,
-      link: {
-        label: "CHiPS",
-        href: "https://csnainc.com/chips/",
-      },
+      school: "Polkadot Blockchain Academy",
+      degree: "PBA-X",
+      start: "2025",
+      end: "2025",
     },
     {
-      title: "XVMS CMSR",
-      techStack: ["C#", "WPF", "Xamarin.Android", "Android", "Desktop App"],
-      description:
-        "Content Management System. App supported for Android and Desktop designed to help organisations to create and manage interactable dynamic content for big screens for their customers.",
-      logo: JarockiMeLogo,
-    },
-    {
-      title: "Intelli Pass Screening System",
-      techStack: ["C#", "WPF", "Xamarin.Android", "Android"],
-      description:
-        "This is an intelligent screening system that also supports attendance with Covid-19 precaution features. During Covid-19 there was a dire need to have a system to prevent people from entering the organisation who were having fever or without masks.",
-      logo: JarockiMeLogo,
+      school: "Cyfrin Upgraft",
+      degree: "Solidity Smart Contract development, Smart Contract Security, Assembly and Formal Verification",
+      start: "2025",
+      end: "2025",
     },
   ],
+
 } as const;
